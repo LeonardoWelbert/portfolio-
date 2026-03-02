@@ -1,0 +1,575 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sobre-mim {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .sobre-mim h2 {
+        justify-content: center;
+    }
+}
+
+body {
+    background: linear-gradient(135deg, #f5f2e5 0%, #1e2f47 100%); /* Gradiente no fundo */
+    min-height: 100vh; /* Altura mínima da tela */
+    color: #333; /* Cor do texto */
+
+}
+
+/* 2. Navbar - Meu Portifólio */
+.navbar {
+    display: flex; /* Exibe os itens em linha */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinha os itens verticalmente */
+    
+    background-color: #0f172a; /* Cor de fundo da navbar */
+    padding: 15px 40px; /* Espaçamento interno */
+    
+    color: white; /* Cor do texto */
+
+    position: sticky; /* Fica fixa no topo ao rolar a página */
+    top: 0; /* Fixa no topo */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    
+
+   
+}
+
+/* LADO ESQUERDO (logo + nome) */
+.navbar-header {
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Nome e título */
+.navbar-header h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.navbar-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* MENU CENTRAL */
+.navbar-menu { /* Centraliza o menu */
+    display: flex; /* Exibe os itens em linha */
+    justify-content: center; /* Centraliza os itens projeto, serviços e contato horizontalmente */
+    flex: 1; /* Ocupa o espaço restante */
+    gap: 50px; /* Espaçamento entre os itens do menu */
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    
+
+}
+
+.navbar-menu a { /* Links do menu */
+    text-decoration: none; /* Remove sublinhado */
+    color: white; /* Cor dos links */
+    font-weight: bold; /* Deixa os links em negrito */
+    transition: 0.3s; /* Transição suave para hover */
+     font-size: 2rem; /* Aumenta o tamanho da fonte */
+}
+
+.navbar-menu a:hover {
+     font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+    color: #578192; /* Cor de destaque ao passar o mouse */
+}
+
+.hero {
+    width: 100%;
+    height: 75vh; /* ocupa tela toda */
+    
+    background-image: url("imagem/eu.png"); /* Imagem de fundo */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero h2 {
+    position: absolute; /* Posicionamento absoluto para centralizar o texto */
+    top: 30%; /* Posiciona o texto no meio da seção */
+    left: 50%; /* Posiciona o texto no centro da seção *//* Centraliza o texto */
+
+    color: white;
+    font-size: 3.5rem; /* Tamanho da fonte */
+    text-align: right /* Alinha o texto à direita */;
+   text-shadow: #0f172a 10px 10px 50px; /* Sombra para melhorar a legibilidade */
+}
+
+.hero p{
+    position: absolute; /* Posicionamento absoluto para centralizar o texto */
+    top: 50%; /* Posiciona o texto no meio da seção */    border-radius: 5px;
+    background-color: #1e2f47;
+    left: 45%; /* Posiciona o texto no centro da seção *//* Centraliza o texto */
+
+    color: white;
+    font-size: 1.5rem; /* Tamanho da fonte */
+    text-align: right /* Alinha o texto à direita */;
+    box-shadow: #1e2f47 10px 10px 50px; /* Sombra para melhorar a legibilidade */
+    padding: 20px 25px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #1e2f47; /* Cor de fundo */
+}
+
+.btn-download {
+   position: absolute; 
+   top: 64%; left: 65%; 
+   background-color: #1e2f47; 
+   color: white; 
+   padding: 35px 45px; 
+   border-radius: 5px; 
+   text-decoration: none; 
+   font-size: 1.4rem; 
+   box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+
+.btn-download:hover {
+    background-color: #578192;
+    transform: scale(1.05);
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 100px;
+    padding-top: 1px;
+}
+
+.sobre-mim {
+    max-width: 600px; /* Largura máxima para melhor leitura */
+   
+}
+
+/* deixa o h2 em flex */
+.sobre-mim h2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #1e2f47;
+    margin-bottom: 15px;
+}
+
+/* cria a linha */
+.sobre-mim h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #1e2f47;
+}
+
+/* deixa o p em flex */
+.sobre-mim p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #1e2f47;
+    margin-bottom: 15px;
+    
+}
+.divisoria-3 {
+    max-width: 600px;
+
+    padding: 40px 20px;
+}
+
+.divisoria {
+    position: relative;
+    padding-top: 15px; /* espaço para a linha */
+    color:  #1e2f47;
+}
+
+.divisoria::before { /* linha antes do texto */
+    content: "";
+    position: absolute;
+    top: -19px; /* posiciona a linha acima do texto */
+    left: 0;
+    width: 100%; /* largura total */
+    height: 2px; /* altura da linha */
+    background: #1e2f47;
+}
+
+
+/*Botão do meu GitHub*/
+.btn-github {
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+
+    margin-top: 30px;
+
+    background-color: #1e2f47;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+
+/* Efeito de hover para o botão do GitHub */
+.btn-github:hover {
+    background-color: #578192;
+    transform: scale(1.05);
+}
+
+
+/* Estilos para a seção de habilidades */
+.sobre-habilidades {
+ display: flex;
+    gap: 60px;
+    margin: 80px 0;
+    padding-left: 80px; /* ajusta aqui */
+}
+
+.habilidades {
+    flex: 1; /* cada lado ocupa metade */
+}
+
+.minhas-habilidades {
+    display: flex; /* exibe os itens em linha */
+    flex-direction: column;    /* exibe os itens em coluna */
+    gap: 20px; /* espaçamento entre os itens */
+}
+
+.minhas-habilidades h2 {
+    display: flex;
+    gap: 20px;
+    color: #1e2f47;
+}
+
+
+/* linha da esquerda */
+.minhas-habilidades h2::before {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #1e2f47;
+}
+
+/* linha da direita */
+.minhas-habilidades h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #1e2f47;
+}
+
+.minhas-habilidades  h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cards-habilidades {
+    display: flex; /* exibe os itens em linha */
+    justify-content: center; /* centraliza os itens horizontalmente */
+    gap: 50px; /* espaçamento entre os cards */
+    flex-wrap: wrap; /* permite que os cards quebrem para a próxima linha em telas menores */
+
+}
+
+.card {
+    width: 160px;
+    height: 160px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   margin-top: 40px; /* distância do título */
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+   
+}
+
+.card:hover {
+        transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.25);
+}
+ /* Estilos para as imagens e ícones dentro dos cards */
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.card svg { /* para os ícones SVG */
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.icon-html { fill: #E34F26; }
+.icon-css { fill: #1572B6; } 
+.icon-js { fill: #F7DF1E; } 
+
+/* Estilos para a seção de formação acadêmica */
+
+.formacao {
+   color: #1e2f47;
+    padding: 60px 0px; /* Espaçamento interno */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  
+   
+
+}
+.formacao::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #1e2f47;
+}
+
+.formacao-cards {
+   display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    width: 80%; /* Largura dos cards */
+    margin: 40px 0px; /* Centraliza os cards horizontalmente */
+}
+
+.card-formacao {
+    flex: 1; 
+    min-width: 250px; /* Garantir que os cards não fiquem muito pequenos em telas menores */
+    background: #f5f5f5;
+    padding: 25px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15); /* Sombra para dar profundidade */
+    transition: 0.3s; /* Transição suave para hover */
+
+}
+
+.card-formacao:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.25);
+}
+
+.card-formacao h3 {
+    color: #1e2f47;
+    margin-bottom: 10px;
+}
+
+.card-formacao p {
+    margin-bottom: 8px;
+}
+
+.card-formacao span {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Estilos para a seção de projetos */
+
+
+.projetos {
+    background-color: #f0f4ff; /* Cor de fundo para destacar a seção de projetos */
+    padding: 80px 0; /* Espaçamento interno */
+     color: #1e2f47; /* Cor do texto para os títulos e descrições dos projetos */
+}
+
+.projetos h2, .projetos p {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #1e2f47;
+    max-width: 900px;
+    margin: 0 auto 30px auto; /* Centraliza o título e a descrição */
+}
+.projeto {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    width: 90%;
+}
+.projetos h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #1e2f47;
+}
+
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    width: 90%;
+}
+
+.card-projeto {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card-projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-projeto img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para os projetos ocultos */
+.oculto-extras {
+    display: none;
+}
+
+.mostrar {
+    display: contents;
+}
+
+.projetos-extras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    width: 90%;
+}
+.card-projeto {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card-projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-projeto img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+/* Estilos para o botão "Ver mais projetos" */
+
+#btn-ver-mais { 
+    margin-top: 100px; 
+    padding: 20px 50px;
+    border: none;
+    border-radius: 8px;
+    background: #1e2f47;
+    color: white;
+    cursor: pointer; 
+    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+     display: flex;
+     margin-left: auto;
+     margin-right: auto;
+     font-size: 1.2rem;
+}
+
+#btn-ver-mais:hover {
+    background: #2f4a6d;
+    transform: translateY(-8px);
+}
+
+
+/* Estilos para a seção de Contatos */
+.contato {
+    display: flex;
+    flex-direction: column; /* mantém o título em cima */
+    align-items: center;
+      margin-top: 50px;
+}
+
+.contato h2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto 30px auto;
+    color: white;
+
+}
+
+.contato h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: white;
+}
+.contato p {
+    color: white;
+    margin: 0 20px;
+}
+
+/* Container só dos contatos */
+.contato-links {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contato-links p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.contato-links i {
+    font-size: 20px;
+    color: white;
+}
+
+footer {
+    background-color: #0f1c2e;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 100px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
