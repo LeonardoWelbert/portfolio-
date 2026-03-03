@@ -1,22 +1,12 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 1. Reset e Base */
 * {
     margin: 0; padding: 0; box-sizing: border-box;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .sobre-mim {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .sobre-mim h2 {
-        justify-content: center;
-    }
 }
 
 body {
@@ -69,6 +59,7 @@ body {
     font-size: 13px;
     color: #94a3b8;
 }
+
 
 /* MENU CENTRAL */
 .navbar-menu { /* Centraliza o menu */
@@ -572,4 +563,78 @@ footer p {
     margin: 0;
     font-size: 14px;
     opacity: 0.8;
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        gap: 15px; /* Adicionado para separar logo do menu */
+    }
+
+    .navbar-menu {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar-menu a {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    /* Aqui usamos o !important ou garantimos que a regra vença a de cima */
+    .hero h2, .hero p, .btn-download {
+        position: static !important; 
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+        left: auto;
+        top: auto;
+    }
+
+    .hero h2 { font-size: 2.2rem; }
+    .hero p { font-size: 1.1rem; }
+
+    .btn-download {
+        display: inline-block;
+        width: auto;
+        padding: 15px 30px;
+    }
+
+    .sobre {
+        padding: 40px 20px;
+    }
+
+    .sobre-mim {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .sobre-mim h2 {
+        justify-content: center;
+    }
+
+    .sobre-habilidades {
+        flex-direction: column;
+        padding-left: 0;
+        gap: 40px;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr; /* Um projeto por linha no celular */
+    }
 }
